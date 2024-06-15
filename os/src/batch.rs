@@ -101,7 +101,9 @@ lazy_static! {
     })};
 }
 
+use log::info;
 pub fn init() {
+    info!("user stack: ({:#x}, {:#x})", USER_STACK.get_sp() - USER_STACK_SIZE, USER_STACK.get_sp());
     print_app_info();
 }
 
