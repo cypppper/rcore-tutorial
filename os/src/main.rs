@@ -4,6 +4,9 @@
 #![feature(asm)]
 #![feature(panic_info_message)]
 #![feature(alloc_error_handler)]
+#![cfg(feature = "board_qemu")]
+
+use core::arch::global_asm;
 
 extern crate alloc;
 
